@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw Dashboard</title>
+  <meta name="description" content="OpenClaw 即時系統狀態監控儀表板">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0f0f14;
+      --bg-card: #1a1a24;
+      --bg-accent: #252532;
+      --text-primary: #f0f0f5;
+      --text-secondary: #8888a0;
+      --green: #00d97e;
+      --green-glow: rgba(0, 217, 126, 0.2);
+      --yellow: #f5a623;
+      --red: #ff4757;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .status-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .status-row:last-child {
+      border-bottom: none;
+    }
+
+    .status-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .status-value {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .status-badge.online {
+      background: var(--green-glow);
+      color: var(--green);
+    }
+
+    .status-badge.offline {
+      background: rgba(255, 71, 87, 0.2);
+      color: var(--red);
+    }
+
+    .status-badge.unknown {
+      background: rgba(136, 136, 160, 0.2);
+      color: var(--text-secondary);
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .time-ago {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-secondary);
+    }
+
+    .spinner {
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--border);
+      border-top-color: var(--green);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">🐾</div>
+      <h1 class="title">OpenClaw Dashboard</h1>
+      <p class="subtitle">即時系統狀態監控</p>
+    </header>
+
+    <main class="card" id="status-card">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>連接中...</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      Powered by Firebase Firestore
+    </footer>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
+    import { getFirestore, doc, onSnapshot } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js';
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAv2fyj1XBrhbr6f6RaFHMti4PU9HOedyI",
+      authDomain: "openclaw-9a373.firebaseapp.com",
+      projectId: "openclaw-9a373",
+      storageBucket: "openclaw-9a373.firebasestorage.app",
+      messagingSenderId: "812812890716",
+      appId: "1:812812890716:web:0d94cfcfdffa9f2cbd6c99"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    function formatTimeAgo(date) {
+      const now = new Date();
+      const diff = Math.floor((now - date) / 1000);
+      
+      if (diff < 60) return `${diff} 秒前`;
+      if (diff < 3600) return `${Math.floor(diff / 60)} 分鐘前`;
+      if (diff < 86400) return `${Math.floor(diff / 3600)} 小時前`;
+      return `${Math.floor(diff / 86400)} 天前`;
+    }
+
+    function getStatusClass(date) {
+      const now = new Date();
+      const diff = Math.floor((now - date) / 1000);
+      if (diff < 120) return 'online';  // 2分鐘內
+      if (diff < 300) return 'unknown'; // 5分鐘內
+      return 'offline';
+    }
+
+    function getStatusText(statusClass) {
+      if (statusClass === 'online') return 'Online';
+      if (statusClass === 'unknown') return 'Checking...';
+      return 'Offline';
+    }
+
+    function render(data) {
+      const card = document.getElementById('status-card');
+      const lastSeen = data.last_seen?.toDate?.() || new Date(data.last_seen_local);
+      const statusClass = getStatusClass(lastSeen);
+
+      card.innerHTML = `
+        <div class="status-row">
+          <span class="status-label">狀態</span>
+          <span class="status-badge ${statusClass}">
+            <span class="pulse"></span>
+            ${getStatusText(statusClass)}
+          </span>
+        </div>
+        <div class="status-row">
+          <span class="status-label">最後更新</span>
+          <span class="status-value time-ago">${formatTimeAgo(lastSeen)}</span>
+        </div>
+        <div class="status-row">
+          <span class="status-label">時間</span>
+          <span class="status-value">${lastSeen.toLocaleString('zh-TW')}</span>
+        </div>
+        <div class="status-row">
+          <span class="status-label">訊息</span>
+          <span class="status-value">${data.message || '-'}</span>
+        </div>
+      `;
+    }
+
+    // 即時監聽
+    const docRef = doc(db, 'status', 'main');
+    onSnapshot(docRef, (snapshot) => {
+      if (snapshot.exists()) {
+        render(snapshot.data());
+      } else {
+        document.getElementById('status-card').innerHTML = `
+          <div class="loading">
+            <p>尚無資料。請確認 monitor.js 正在運行。</p>
+          </div>
+        `;
+      }
+    }, (error) => {
+      console.error('Firestore error:', error);
+      document.getElementById('status-card').innerHTML = `
+        <div class="loading">
+          <p>連線錯誤: ${error.message}</p>
+        </div>
+      `;
+    });
+
+    // 每 30 秒更新「時間前」
+    setInterval(() => {
+      const timeAgo = document.querySelector('.time-ago');
+      if (timeAgo && window.lastSeenDate) {
+        timeAgo.textContent = formatTimeAgo(window.lastSeenDate);
+      }
+    }, 30000);
+  </script>
+</body>
+</html>
