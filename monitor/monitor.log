@@ -1,0 +1,1342 @@
+=== OpenClaw Monitor V3.8 ===
+Project: openclaw-9a373
+Interval: 10s
+-----------------------------
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 14m · gemini-3-pro-high 40% left ⏱3h 14m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 10m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:06:10.864Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:06:10.864Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 14m · gemini-3-pro-high 40% left ⏱3h 14m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 10m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:06:20.877Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:06:20.877Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 14m · gemini-3-pro-high 40% left ⏱3h 14m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 10m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:06:31.040Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:06:31.040Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 13m · gemini-3-pro-high 40% left ⏱3h 13m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 9m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:06:41.042Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:06:41.042Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 13m · gemini-3-pro-low 40% left ⏱3h 13m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 9m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:06:51.061Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:06:51.061Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 13m · gemini-3-pro-high 40% left ⏱3h 13m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 9m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:07:01.062Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:07:01.062Z] ✗ Request failed: 
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 13m · gemini-3-pro-low 40% left ⏱3h 13m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 9m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:07:11.065Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:07:11.065Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 13m · gemini-3-pro-low 40% left ⏱3h 13m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 9m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:07:21.179Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:07:21.179Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 13m · gemini-3-pro-low 40% left ⏱3h 13m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 8m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:07:31.234Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:07:31.234Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 12m · gemini-3-pro-high 40% left ⏱3h 12m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 8m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:07:41.234Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:07:41.234Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 12m · gemini-3-pro-high 40% left ⏱3h 12m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 8m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:07:51.238Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 8m
+
+Parsed Models: {}
+[2026-02-04T07:08:01.240Z] 模型額度: {}
+[2026-02-04T07:08:01.240Z] ✓ Heartbeat V3.8 sent
+[2026-02-04T07:07:51.238Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 8m
+
+Parsed Models: {}
+[2026-02-04T07:08:11.240Z] 模型額度: {}
+[2026-02-04T07:08:11.240Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 12m · gemini-3-pro-low 40% left ⏱3h 12m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 8m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:08:21.241Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:08:21.241Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 12m · gemini-3-pro-high 40% left ⏱3h 12m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 8m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:08:31.241Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:08:31.241Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 11m · gemini-3-pro-low 40% left ⏱3h 11m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 7m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:08:41.314Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:08:41.314Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 11m · gemini-3-pro-low 40% left ⏱3h 11m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 7m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:08:51.314Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:08:51.314Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 11m · gemini-3-pro-low 40% left ⏱3h 11m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 7m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:09:01.478Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:09:01.478Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 11m · gemini-3-pro-high 40% left ⏱3h 11m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 7m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:09:11.559Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:09:11.559Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 11m · gemini-3-pro-high 40% left ⏱3h 11m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 7m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:09:21.561Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:09:21.561Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 11m · gemini-3-pro-low 40% left ⏱3h 11m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 7m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:09:31.563Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:09:31.563Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 10m · gemini-3-pro-high 40% left ⏱3h 10m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 6m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:09:41.609Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:09:41.609Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 10m · gemini-3-pro-low 40% left ⏱3h 10m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 6m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:09:51.609Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:09:51.609Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 10m · gemini-3-pro-high 40% left ⏱3h 10m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 6m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:10:01.634Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:10:01.634Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 10m · gemini-3-pro-high 40% left ⏱3h 10m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 6m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:10:11.638Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:10:11.638Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 10m · gemini-3-pro-high 40% left ⏱3h 10m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 6m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:10:22.358Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:10:22.358Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 10m · gemini-3-pro-high 40% left ⏱3h 10m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 5m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:10:33.620Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:10:33.620Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 9m · gemini-3-pro-low 40% left ⏱3h 9m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 5m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:10:43.625Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:10:43.625Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 9m · gemini-3-pro-low 40% left ⏱3h 9m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 5m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:10:53.662Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:10:53.662Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 9m · gemini-3-pro-high 40% left ⏱3h 9m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 5m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:11:03.663Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:11:03.663Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 9m · gemini-3-pro-high 40% left ⏱3h 9m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 5m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:11:13.665Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:11:13.665Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 9m · gemini-3-pro-low 40% left ⏱3h 9m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 5m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:11:23.666Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:11:23.666Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 9m · gemini-3-pro-low 40% left ⏱3h 9m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 5m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:11:33.674Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:11:33.674Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 8m · gemini-3-pro-high 40% left ⏱3h 8m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 4m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:11:43.701Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:11:43.701Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 8m · gemini-3-pro-low 40% left ⏱3h 8m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 4m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:11:53.701Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:11:53.701Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 8m · gemini-3-pro-high 40% left ⏱3h 8m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 4m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:12:03.702Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:12:03.702Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 4m
+
+Parsed Models: {}
+[2026-02-04T07:12:13.767Z] 模型額度: {}
+[2026-02-04T07:12:13.767Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 8m · gemini-3-pro-low 40% left ⏱3h 8m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 4m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:12:23.767Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:12:23.767Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 7m · gemini-3-pro-high 40% left ⏱3h 7m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 3m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:12:33.768Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:12:33.768Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 7m · gemini-3-pro-low 40% left ⏱3h 7m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 3m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:12:43.771Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:12:43.771Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 3m
+
+Parsed Models: {}
+[2026-02-04T07:12:53.844Z] 模型額度: {}
+[2026-02-04T07:12:53.844Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 7m · gemini-3-pro-low 40% left ⏱3h 7m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 3m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:13:03.859Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:13:03.859Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 7m · gemini-3-pro-high 40% left ⏱3h 7m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 3m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:13:13.860Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:13:13.860Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 7m · gemini-3-pro-low 40% left ⏱3h 7m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 3m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:13:23.898Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+[2026-02-04T07:13:23.898Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 6m · gemini-3-pro-high 40% left ⏱3h 6m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 2m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:13:33.900Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:13:33.900Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 40% left ⏱3h 6m · gemini-3-pro-low 40% left ⏱3h 6m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 2m
+
+Parsed Models: { 'gemini-3-pro-high': 40, 'gemini-3-pro-low': 40 }
+[2026-02-04T07:13:43.901Z] 模型額度: {"gemini-3-pro-high":40,"gemini-3-pro-low":40}
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 2m
+
+Parsed Models: {}
+[2026-02-04T07:13:53.906Z] 模型額度: {}
+[2026-02-04T07:13:53.906Z] ✓ Heartbeat V3.8 sent
+[2026-02-04T07:13:43.901Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 6m · gemini-3-pro-high 40% left ⏱3h 6m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 2m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:14:03.980Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:14:03.980Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 6m · gemini-3-pro-high 40% left ⏱3h 6m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 2m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:14:14.012Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:14:14.012Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 6m · gemini-3-pro-high 40% left ⏱3h 6m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 2m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:14:24.012Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:14:24.012Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 6m · gemini-3-pro-high 40% left ⏱3h 6m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 2m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:14:34.016Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:14:34.016Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 5m · gemini-3-pro-high 40% left ⏱3h 5m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 1m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:14:44.482Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:14:44.482Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-low 40% left ⏱3h 5m · gemini-3-pro-high 40% left ⏱3h 5m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 1m
+
+Parsed Models: { 'gemini-3-pro-low': 40, 'gemini-3-pro-high': 40 }
+[2026-02-04T07:14:54.482Z] 模型額度: {"gemini-3-pro-low":40,"gemini-3-pro-high":40}
+[2026-02-04T07:14:54.482Z] ✓ Heartbeat V3.8 sent
+=== OpenClaw Monitor V3.8 ===
+Project: openclaw-9a373
+Interval: 10s
+-----------------------------
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 32m
+
+Parsed Models: {}
+[2026-02-04T07:42:45.596Z] 模型額度: {}
+[2026-02-04T07:42:45.596Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 32m
+
+Parsed Models: {}
+[2026-02-04T07:42:55.615Z] 模型額度: {}
+[2026-02-04T07:42:55.615Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 31m
+
+Parsed Models: {}
+[2026-02-04T07:43:05.634Z] 模型額度: {}
+[2026-02-04T07:43:05.634Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 20% left ⏱2h 37m · gemini-3-pro-low 20% left ⏱2h 37m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 31m
+
+Parsed Models: { 'gemini-3-pro-high': 20, 'gemini-3-pro-low': 20 }
+[2026-02-04T07:43:15.652Z] 模型額度: {"gemini-3-pro-high":20,"gemini-3-pro-low":20}
+[2026-02-04T07:43:15.652Z] ✓ Heartbeat V3.8 sent
+Raw Models Output (stripped): Config        : ~/.openclaw/openclaw.json
+Agent dir     : ~/.openclaw/agents/main/agent
+Default       : google-antigravity/gemini-3-pro-low
+Fallbacks (0) : -
+Image model   : -
+Image fallbacks (0): -
+Aliases (0)   : -
+Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+
+Auth overview
+Auth store    : ~/.openclaw/agents/main/agent/auth-profiles.json
+Shell env     : off
+Providers w/ OAuth/tokens (1): google-antigravity (1)
+- github-copilot effective=env:ghp_yM5Z...rY0hMHjq | env=ghp_yM5Z...rY0hMHjq | source=env: GITHUB_TOKEN
+- google-antigravity effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=1, token=0, api_key=0) | google-antigravity:jasonwth0928@gmail.com=OAuth (jasonwth0928@gmail.com)
+
+OAuth/token status
+- google-antigravity usage: gemini-3-pro-high 20% left ⏱2h 37m · gemini-3-pro-low 20% left ⏱2h 37m
+  - google-antigravity:jasonwth0928@gmail.com (jasonwth0928@gmail.com) ok expires in 31m
+
+Parsed Models: { 'gemini-3-pro-high': 20, 'gemini-3-pro-low': 20 }
+[2026-02-04T07:43:25.737Z] 模型額度: {"gemini-3-pro-high":20,"gemini-3-pro-low":20}
+[2026-02-04T07:43:25.737Z] ✓ Heartbeat V3.8 sent

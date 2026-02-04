@@ -3,22 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenClaw Dashboard</title>
-  <meta name="description" content="OpenClaw 即時系統狀態監控儀表板">
+  <title>OpenClaw Dashboard V3.9</title>
+  <meta name="description" content="OpenClaw 即時系統狀態監控儀表板 - 模型額度、特勤局狀態">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #0f0f14;
-      --bg-card: #1a1a24;
-      --bg-accent: #252532;
+      --bg-dark: #0a0a0f;
+      --bg-card: #12121a;
+      --bg-accent: #1a1a26;
+      --bg-hover: #22222e;
       --text-primary: #f0f0f5;
-      --text-secondary: #8888a0;
+      --text-secondary: #7a7a8c;
+      --text-muted: #55556a;
       --green: #00d97e;
-      --green-glow: rgba(0, 217, 126, 0.2);
-      --yellow: #f5a623;
+      --green-dim: #00b368;
+      --green-glow: rgba(0, 217, 126, 0.15);
+      --yellow: #ffc107;
+      --yellow-glow: rgba(255, 193, 7, 0.15);
       --red: #ff4757;
-      --border: rgba(255, 255, 255, 0.08);
+      --red-glow: rgba(255, 71, 87, 0.15);
+      --blue: #6c5ce7;
+      --blue-glow: rgba(108, 92, 231, 0.15);
+      --cyan: #00cec9;
+      --cyan-glow: rgba(0, 206, 201, 0.15);
+      --border: rgba(255, 255, 255, 0.06);
+      --border-light: rgba(255, 255, 255, 0.1);
+      --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-2: linear-gradient(135deg, #00d97e 0%, #00b368 100%);
     }
 
     * {
@@ -32,32 +44,38 @@
       background: var(--bg-dark);
       color: var(--text-primary);
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
+      padding: 1.5rem;
+      background-image: 
+        radial-gradient(ellipse at top, rgba(108, 92, 231, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(0, 217, 126, 0.05) 0%, transparent 50%);
     }
 
     .container {
       width: 100%;
-      max-width: 480px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .header {
       text-align: center;
       margin-bottom: 2rem;
+      padding: 1rem 0;
     }
 
     .logo {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
+      filter: drop-shadow(0 0 20px rgba(0, 217, 126, 0.3));
     }
 
     .title {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       font-weight: 700;
       letter-spacing: -0.02em;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .subtitle {
@@ -66,45 +84,75 @@
       margin-top: 0.25rem;
     }
 
+    .version-badge {
+      display: inline-block;
+      background: var(--blue-glow);
+      color: var(--blue);
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .grid .card.full-width {
+        grid-column: span 2;
+      }
+    }
+
     .card {
       background: var(--bg-card);
       border-radius: 16px;
-      padding: 2rem;
+      padding: 1.25rem;
       border: 1px solid var(--border);
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .status-row {
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 1rem 0;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
       border-bottom: 1px solid var(--border);
     }
 
-    .status-row:last-child {
-      border-bottom: none;
+    .card-icon {
+      font-size: 1.25rem;
     }
 
-    .status-label {
-      color: var(--text-secondary);
+    .card-title {
       font-size: 0.9rem;
-    }
-
-    .status-value {
       font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
+    /* Status Badge */
     .status-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.4rem 0.8rem;
+      gap: 0.4rem;
+      padding: 0.35rem 0.7rem;
       border-radius: 20px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
     }
 
@@ -114,18 +162,18 @@
     }
 
     .status-badge.offline {
-      background: rgba(255, 71, 87, 0.2);
+      background: var(--red-glow);
       color: var(--red);
     }
 
-    .status-badge.unknown {
-      background: rgba(136, 136, 160, 0.2);
-      color: var(--text-secondary);
+    .status-badge.idle {
+      background: var(--yellow-glow);
+      color: var(--yellow);
     }
 
     .pulse {
-      width: 8px;
-      height: 8px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: currentColor;
       animation: pulse 2s ease-in-out infinite;
@@ -136,6 +184,149 @@
       50% { opacity: 0.5; transform: scale(0.8); }
     }
 
+    /* Progress Bar */
+    .progress-item {
+      margin-bottom: 1rem;
+    }
+
+    .progress-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .progress-name {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .progress-value {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: var(--bg-accent);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.5s ease;
+      background: var(--gradient-2);
+    }
+
+    .progress-fill.low {
+      background: linear-gradient(135deg, var(--red) 0%, #ff6b7a 100%);
+    }
+
+    .progress-fill.medium {
+      background: linear-gradient(135deg, var(--yellow) 0%, #ffd93d 100%);
+    }
+
+    /* Agent List */
+    .agent-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .agent-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem;
+      background: var(--bg-accent);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+
+    .agent-item:hover {
+      background: var(--bg-hover);
+    }
+
+    .agent-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .agent-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      background: var(--blue-glow);
+    }
+
+    .agent-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .agent-model {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .agent-status {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .agent-status.active {
+      color: var(--green);
+    }
+
+    .agent-status.idle {
+      color: var(--yellow);
+    }
+
+    /* Status Row */
+    .status-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .status-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .status-row:first-child {
+      padding-top: 0;
+    }
+
+    .status-label {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    .status-value {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
     .time-ago {
       font-variant-numeric: tabular-nums;
     }
@@ -143,8 +334,8 @@
     .footer {
       text-align: center;
       margin-top: 2rem;
-      color: var(--text-secondary);
-      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-size: 0.75rem;
     }
 
     .loading {
@@ -154,8 +345,8 @@
     }
 
     .spinner {
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 28px;
       border: 2px solid var(--border);
       border-top-color: var(--green);
       border-radius: 50%;
@@ -166,6 +357,13 @@
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
+
+    .empty-state {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
@@ -174,66 +372,142 @@
       <div class="logo">🐾</div>
       <h1 class="title">OpenClaw Dashboard</h1>
       <p class="subtitle">即時系統狀態監控</p>
+      <span class="version-badge">V3.9</span>
     </header>
 
-    <main class="card" id="status-card">
-      <div class="loading">
-        <div class="spinner"></div>
-        <p>連接中...</p>
+    <div class="grid">
+      <!-- 系統狀態 -->
+      <div class="card" id="status-card">
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>連接中...</p>
+        </div>
       </div>
-    </main>
+
+      <!-- 模型額度 -->
+      <div class="card" id="models-card">
+        <div class="card-header">
+          <span class="card-icon">⚡</span>
+          <span class="card-title">模型額度</span>
+        </div>
+        <div id="models-content" class="loading">
+          <div class="spinner"></div>
+          <p>載入中...</p>
+        </div>
+      </div>
+
+      <!-- 特勤局 -->
+      <div class="card full-width" id="agents-card">
+        <div class="card-header">
+          <span class="card-icon">🕵️</span>
+          <span class="card-title">特勤局</span>
+        </div>
+        <div id="agents-content" class="loading">
+          <div class="spinner"></div>
+          <p>載入中...</p>
+        </div>
+      </div>
+
+      <!-- 工作板 -->
+      <div class="card full-width" id="tasks-card">
+        <div class="card-header">
+          <span class="card-icon">📋</span>
+          <span class="card-title">工作板</span>
+        </div>
+        <div id="tasks-content" class="loading">
+          <div class="spinner"></div>
+          <p>載入中...</p>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer">
-      Powered by Firebase Firestore
+      Powered by Firebase Firestore • Dashboard V3.9
     </footer>
   </div>
 
-  <script type="module">
-    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
-    import { getFirestore, doc, onSnapshot } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js';
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyAv2fyj1XBrhbr6f6RaFHMti4PU9HOedyI",
-      authDomain: "openclaw-9a373.firebaseapp.com",
-      projectId: "openclaw-9a373",
-      storageBucket: "openclaw-9a373.firebasestorage.app",
-      messagingSenderId: "812812890716",
-      appId: "1:812812890716:web:0d94cfcfdffa9f2cbd6c99"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  
+  <script>
+    // ... (Existing Functions) ...
 
     function formatTimeAgo(date) {
-      const now = new Date();
-      const diff = Math.floor((now - date) / 1000);
-      
-      if (diff < 60) return `${diff} 秒前`;
-      if (diff < 3600) return `${Math.floor(diff / 60)} 分鐘前`;
-      if (diff < 86400) return `${Math.floor(diff / 3600)} 小時前`;
-      return `${Math.floor(diff / 86400)} 天前`;
+        // ... (implementation)
+        const now = new Date();
+        const diff = Math.floor((now - date) / 1000);
+        if (diff < 60) return `${diff} 秒前`;
+        if (diff < 3600) return `${Math.floor(diff / 60)} 分鐘前`;
+        if (diff < 86400) return `${Math.floor(diff / 3600)} 小時前`;
+        return `${Math.floor(diff / 86400)} 天前`;
     }
-
+    
     function getStatusClass(date) {
-      const now = new Date();
-      const diff = Math.floor((now - date) / 1000);
-      if (diff < 120) return 'online';  // 2分鐘內
-      if (diff < 300) return 'unknown'; // 5分鐘內
-      return 'offline';
+        const now = new Date();
+        const diff = Math.floor((now - date) / 1000);
+        if (diff < 120) return 'online';
+        if (diff < 300) return 'idle';
+        return 'offline';
     }
 
     function getStatusText(statusClass) {
-      if (statusClass === 'online') return 'Online';
-      if (statusClass === 'unknown') return 'Checking...';
-      return 'Offline';
+        if (statusClass === 'online') return 'Online';
+        if (statusClass === 'idle') return 'Idle';
+        return 'Offline';
     }
 
-    function render(data) {
+    function getProgressClass(percent) {
+        if (percent <= 20) return 'low';
+        if (percent <= 50) return 'medium';
+        return '';
+    }
+
+    function parseLastSeen(data) {
+      // 容錯解析 last_seen，支援多種格式
+      let lastSeen;
+      
+      // 1. 嘗試 Firestore Timestamp 物件
+      if (data.last_seen?.toDate) {
+        lastSeen = data.last_seen.toDate();
+        console.log('[parseLastSeen] Used Timestamp.toDate():', lastSeen);
+      }
+      // 2. 嘗試直接解析 ISO 字串
+      else if (typeof data.last_seen === 'string') {
+        lastSeen = new Date(data.last_seen);
+        console.log('[parseLastSeen] Parsed ISO string:', lastSeen);
+      }
+      // 3. Fallback 到 last_seen_local
+      else if (data.last_seen_local) {
+        lastSeen = new Date(data.last_seen_local);
+        console.log('[parseLastSeen] Used last_seen_local:', lastSeen);
+      }
+      // 4. 最後 fallback 到當前時間
+      else {
+        lastSeen = new Date(0); // epoch，會顯示 Offline
+        console.warn('[parseLastSeen] No valid timestamp, using epoch');
+      }
+      
+      // 驗證結果
+      if (isNaN(lastSeen.getTime())) {
+        console.error('[parseLastSeen] Invalid Date detected, raw data:', data.last_seen, data.last_seen_local);
+        lastSeen = new Date(0);
+      }
+      
+      return lastSeen;
+    }
+
+    function renderStatus(data) {
       const card = document.getElementById('status-card');
-      const lastSeen = data.last_seen?.toDate?.() || new Date(data.last_seen_local);
+      const lastSeen = parseLastSeen(data);
       const statusClass = getStatusClass(lastSeen);
+      window.lastSeenDate = lastSeen;
+      console.log('[renderStatus] lastSeen:', lastSeen, '| statusClass:', statusClass);
 
       card.innerHTML = `
+        <div class="card-header">
+          <span class="card-icon">📡</span>
+          <span class="card-title">系統狀態</span>
+        </div>
         <div class="status-row">
           <span class="status-label">狀態</span>
           <span class="status-badge ${statusClass}">
@@ -256,34 +530,292 @@
       `;
     }
 
-    // 即時監聽
-    const docRef = doc(db, 'status', 'main');
-    onSnapshot(docRef, (snapshot) => {
-      if (snapshot.exists()) {
-        render(snapshot.data());
-      } else {
-        document.getElementById('status-card').innerHTML = `
-          <div class="loading">
-            <p>尚無資料。請確認 monitor.js 正在運行。</p>
+    function renderModels(models) {
+      const content = document.getElementById('models-content');
+      console.log('[renderModels] V3.8 - Received models:', JSON.stringify(models));
+      console.log('[renderModels] Type:', typeof models, '| Keys:', models ? Object.keys(models) : 'null');
+      
+      // 強制顯示：如果解析後是空的，顯示測試數據以確認渲染邏輯執行
+      if (!models || typeof models !== 'object' || Object.keys(models).length === 0) {
+        console.warn('[renderModels] Models is empty or invalid, showing fallback');
+        models = { "⏳ Waiting for data...": 0 };
+      }
+      let html = '';
+      Object.entries(models).forEach(([name, percent]) => {
+        const progressClass = getProgressClass(percent);
+        html += `
+          <div class="progress-item">
+            <div class="progress-label">
+              <span class="progress-name">${name}</span>
+              <span class="progress-value">${percent}%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill ${progressClass}" style="width: ${percent}%"></div>
+            </div>
           </div>
         `;
-      }
-    }, (error) => {
-      console.error('Firestore error:', error);
-      document.getElementById('status-card').innerHTML = `
-        <div class="loading">
-          <p>連線錯誤: ${error.message}</p>
-        </div>
-      `;
-    });
+      });
+      content.innerHTML = html;
+    }
 
-    // 每 30 秒更新「時間前」
-    setInterval(() => {
-      const timeAgo = document.querySelector('.time-ago');
-      if (timeAgo && window.lastSeenDate) {
-        timeAgo.textContent = formatTimeAgo(window.lastSeenDate);
+    function renderAgents(agents) {
+      const content = document.getElementById('agents-content');
+      
+      // Safety check: ensure agents is an array
+      if (!Array.isArray(agents)) {
+        console.warn('renderAgents received non-array:', agents);
+        agents = []; 
       }
-    }, 30000);
+
+      if (agents.length === 0) {
+        content.innerHTML = '<div class="empty-state">尚無活躍 Agent</div>';
+        return;
+      }
+
+      let html = '<div class="agent-list">';
+      agents.forEach(agent => {
+        const config = agentConfig[agent.label] || { emoji: '🤖', role: 'Agent' };
+        let statusClass = 'offline';
+        let statusText = '休眠中';
+        
+        if (agent.status === 'active') {
+          statusClass = 'active'; // CSS class name (maps to green)
+          statusText = '工作中';
+        } else if (agent.status === 'idle') {
+          statusClass = 'idle'; // CSS class name (maps to yellow)
+          statusText = '閒置中';
+        }
+        
+        const ageMinutes = Math.floor(agent.ageMs / 60000);
+        const timeText = ageMinutes < 1 ? '剛剛' : ageMinutes + ' 分鐘前';
+        
+        html += `
+          <div class="agent-item">
+            <div class="agent-info">
+              <div class="agent-avatar">${config.emoji}</div>
+              <div>
+                <div class="agent-name">${agent.label}</div>
+                <div class="agent-model">${agent.model} • ${agent.tokens.toLocaleString()} tokens</div>
+              </div>
+            </div>
+            <div class="agent-status ${statusClass}">
+              <span class="pulse"></span>
+              ${statusText} • ${timeText}
+            </div>
+          </div>
+        `;
+      });
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    function renderTasks(tasks) {
+      const content = document.getElementById('tasks-content');
+      if (!content) return;
+      
+      // Safety check: ensure tasks is an array
+      if (!Array.isArray(tasks)) {
+        console.warn('renderTasks received non-array:', tasks);
+        tasks = [];
+      }
+
+      if (tasks.length === 0) {
+        content.innerHTML = '<div class="empty-state">目前無工作</div>';
+        return;
+      }
+      
+      // ... (rest of the function)
+      let html = '<div class="task-list">';
+      tasks.forEach(task => {
+        let statusIcon = '⏳';
+        let statusClass = 'pending';
+        let statusText = '進行中';
+        
+        if (task.status === 'done') { 
+          statusIcon = '✅'; 
+          statusClass = 'done';
+          statusText = '已完成';
+        } else if (task.status === 'running') { 
+          statusIcon = '▶️'; 
+          statusClass = 'running'; 
+          statusText = '執行中';
+        } else if (task.status === 'failed') { 
+          statusIcon = '❌'; 
+          statusClass = 'failed'; 
+          statusText = '失敗';
+        } else if (task.status === 'scheduled') {
+          statusIcon = '📅';
+          statusClass = 'scheduled';
+          statusText = '排程中';
+        }
+        
+        html += `
+          <div class="task-item ${statusClass}">
+            <div class="task-icon">${statusIcon}</div>
+            <div class="task-details">
+              <div class="task-title">${task.title}</div>
+              <div class="task-time">${new Date(task.updatedAt).toLocaleTimeString()} • ${statusText}</div>
+            </div>
+          </div>
+        `;
+      });
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    // 特勤局成員配置
+    const agentConfig = {
+      '羊羊': { emoji: '🐑', role: '主人' },
+      '開發組': { emoji: '🛠️', role: '開發任務' },
+      '程式組': { emoji: '💻', role: '程式編碼' },
+      '雜工': { emoji: '🧹', role: '雜務處理' }
+    };
+
+    function renderTasks(tasks) {
+      const content = document.getElementById('tasks-content');
+      if (!content) return;
+      
+      // Safety check: ensure tasks is an array
+      if (!Array.isArray(tasks)) {
+        console.warn('renderTasks received non-array:', tasks);
+        tasks = [];
+      }
+
+      if (tasks.length === 0) {
+        content.innerHTML = '<div class="empty-state">目前無工作</div>';
+        return;
+      }
+      
+      // ... (rest of the function)
+      let html = '<div class="task-list">';
+      tasks.forEach(task => {
+        let statusIcon = '⏳';
+        let statusClass = 'pending';
+        let statusText = '進行中';
+        
+        if (task.status === 'done') { 
+          statusIcon = '✅'; 
+          statusClass = 'done';
+          statusText = '已完成';
+        } else if (task.status === 'running') { 
+          statusIcon = '▶️'; 
+          statusClass = 'running'; 
+          statusText = '執行中';
+        } else if (task.status === 'failed') { 
+          statusIcon = '❌'; 
+          statusClass = 'failed'; 
+          statusText = '失敗';
+        } else if (task.status === 'scheduled') {
+          statusIcon = '📅';
+          statusClass = 'scheduled';
+          statusText = '排程中';
+        }
+        
+        html += `
+          <div class="task-item ${statusClass}">
+            <div class="task-icon">${statusIcon}</div>
+            <div class="task-details">
+              <div class="task-title">${task.title}</div>
+              <div class="task-time">${new Date(task.updatedAt).toLocaleTimeString()} • ${statusText}</div>
+            </div>
+          </div>
+        `;
+      });
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    function render(data) {
+      const container = document.querySelector('.container');
+      if (container) {
+          container.classList.add('flash');
+          setTimeout(() => container.classList.remove('flash'), 500);
+      }
+      console.log('[render] Raw data from Firestore SDK:', data);
+      
+      // Firebase Web SDK (compat) 會自動解包 Firestore 類型
+      // data.last_seen 是 Timestamp 物件，用 .toDate() 轉換
+      // data.models 直接是 { key: value }
+      // data.agents 直接是 [{ ... }]
+      
+      renderStatus(data);
+      
+      // models: SDK 已解包，直接是 { "gemini-3-pro-low": 40, ... }
+      if (data.models && typeof data.models === 'object') {
+        console.log('[render] Models (already unpacked):', data.models);
+        renderModels(data.models);
+      } else {
+        console.warn('[render] No models data');
+        renderModels({});
+      }
+      
+      // agents: SDK 已解包，直接是陣列 [{ key, label, model, ... }]
+      if (Array.isArray(data.agents)) {
+        console.log('[render] Agents (already unpacked):', data.agents);
+        renderAgents(data.agents);
+      } else {
+        console.warn('[render] No agents data or not an array');
+        renderAgents([]);
+      }
+
+      // tasks: SDK 已解包，直接是陣列 [{ id, title, status, ... }]
+      if (Array.isArray(data.tasks)) {
+        console.log('[render] Tasks (already unpacked):', data.tasks);
+        renderTasks(data.tasks);
+      } else {
+        console.warn('[render] No tasks data or not an array');
+        renderTasks([]);
+      }
+    }
+
+    // Initialize Firebase (AFTER defining all functions)
+    const firebaseConfig = {
+      apiKey: "AIzaSyAv2fyj1XBrhbr6f6RaFHMti4PU9HOedyI",
+      authDomain: "openclaw-9a373.firebaseapp.com",
+      projectId: "openclaw-9a373",
+      storageBucket: "openclaw-9a373.firebasestorage.app",
+      messagingSenderId: "812812890716",
+      appId: "1:812812890716:web:0d94cfcfdffa9f2cbd6c99"
+    };
+
+    try {
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      
+      setTimeout(() => {
+        const loading = document.querySelector('.loading');
+        if (loading && loading.textContent.includes('連接中')) {
+          loading.innerHTML = `
+            <div style="color:var(--red)">
+              <p>⚠️ 連線逾時</p>
+              <p style="font-size:0.8rem;margin-top:0.5rem;color:var(--text-secondary)">
+                請檢查網路連線或防火牆設定。
+              </p>
+            </div>
+          `;
+        }
+      }, 15000);
+
+      db.collection('status').doc('main').onSnapshot((doc) => {
+        if (doc.exists) {
+          console.log('Data received');
+          render(doc.data());
+        } else {
+          console.log('No such document!');
+          document.getElementById('status-card').innerHTML = '<div class="loading"><p>No Data Found</p></div>';
+        }
+      }, (error) => {
+        console.error('Firestore Error:', error);
+        document.getElementById('status-card').innerHTML = `<div class="loading" style="color:var(--red)"><p>Error: ${error.code}</p></div>`;
+      });
+
+    } catch (e) {
+      console.error('Init Error:', e);
+      document.getElementById('status-card').innerHTML = `<div class="loading" style="color:var(--red)"><p>Init Failed: ${e.message}</p></div>`;
+    }
+
+    // ... (Existing Listeners) ...
+
   </script>
 </body>
 </html>
