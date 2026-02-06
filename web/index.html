@@ -372,7 +372,7 @@
       <div class="logo">🐾</div>
       <h1 class="title">OpenClaw Dashboard</h1>
       <p class="subtitle">即時系統狀態監控</p>
-      <span class="version-badge">V3.9</span>
+      <span class="version-badge">V4.1.1</span>
     </header>
 
     <div class="grid">
@@ -532,25 +532,30 @@
 
     function renderModels(models) {
       const content = document.getElementById('models-content');
-      console.log('[renderModels] V3.8 - Received models:', JSON.stringify(models));
-      console.log('[renderModels] Type:', typeof models, '| Keys:', models ? Object.keys(models) : 'null');
-      
-      // 強制顯示：如果解析後是空的，顯示測試數據以確認渲染邏輯執行
-      if (!models || typeof models !== 'object' || Object.keys(models).length === 0) {
-        console.warn('[renderModels] Models is empty or invalid, showing fallback');
-        models = { "⏳ Waiting for data...": 0 };
+      if (!models || Object.keys(models).length === 0) {
+        content.innerHTML = '<div class="empty-state">尚無模型數據</div>';
+        return;
       }
       let html = '';
       Object.entries(models).forEach(([name, percent]) => {
-        const progressClass = getProgressClass(percent);
+        let progressClass = getProgressClass(percent);
+        let percentText = percent + '%';
+        let barStyle = `width: ${percent}%`;
+        
+        if (percent === -1) {
+            percentText = '♾️';
+            barStyle = 'width: 100%; background: linear-gradient(135deg, var(--cyan) 0%, var(--blue) 100%); opacity: 0.7';
+            progressClass = '';
+        }
+        
         html += `
           <div class="progress-item">
             <div class="progress-label">
               <span class="progress-name">${name}</span>
-              <span class="progress-value">${percent}%</span>
+              <span class="progress-value">${percentText}</span>
             </div>
             <div class="progress-bar">
-              <div class="progress-fill ${progressClass}" style="width: ${percent}%"></div>
+              <div class="progress-fill ${progressClass}" style="${barStyle}"></div>
             </div>
           </div>
         `;

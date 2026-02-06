@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 /**
- * OpenClaw Monitor V3.8 - Dashboard Service
+ * OpenClaw Monitor V4.1.1 - Dashboard Service (V2.1 Architecture)
  * - 獲取模型額度 (openclaw models) - Strip ANSI colors
  * - 獲取活躍 sessions (openclaw sessions --json)
+ * - 監控 tasks/inbox/ (Queue & Router 支援)
+ * - Health Check 自動告警
  * - 推送至 Firestore
  */
 
@@ -11,6 +13,8 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 const { exec } = require('child_process');
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // 手動讀取 .env
 function loadEnv() {
@@ -34,16 +38,28 @@ loadEnv();
 const PROJECT_ID = process.env.FIREBASE_PROJECT_ID;
 const API_KEY = process.env.FIREBASE_API_KEY;
 const INTERVAL_MS = 10000;
+const INBOX_PATH = path.join(__dirname, '../../tasks/inbox');
+const WORKSPACE_PATH = path.join(__dirname, '../..');
+
+// Health Check 狀態
+let consecutiveFailures = 0;
+const MAX_FAILURES_BEFORE_ALERT = 3;
 
 if (!PROJECT_ID || !API_KEY) {
   console.error('缺少 FIREBASE_PROJECT_ID 或 FIREBASE_API_KEY');
   process.exit(1);
 }
 
+const OPENCLAW_BIN = '/home/openclaw/.npm-global/bin/openclaw';
+
 /**
  * 執行 shell 指令並返回 Promise
  */
 function runCommand(cmd) {
+  // Replace direct 'openclaw' command with absolute path
+  if (cmd.startsWith('openclaw ')) {
+    cmd = cmd.replace('openclaw ', `${OPENCLAW_BIN} `);
+  }
   return new Promise((resolve, reject) => {
     exec(cmd, { maxBuffer: 1024 * 1024 }, (error, stdout, stderr) => {
       if (error) {
@@ -83,11 +99,143 @@ function parseModelsOutput(output) {
     models[name] = parseInt(match[2], 10);
   }
   
-  console.log('Parsed Models:', models);
+  // 補完：解析 Configured models 行，將有配置但沒 Usage 數據的模型設為 -1
+  // Format: Configured models (2): google-antigravity/claude-opus-4-5-thinking, google-antigravity/gemini-3-pro-low
+  const configuredMatch = output.match(/Configured models \(\d+\):\s*(.+)/i);
+  if (configuredMatch) {
+    const configuredList = configuredMatch[1].split(',').map(s => s.trim());
+    console.log('Configured models found:', configuredList);
+    
+    for (const fullModel of configuredList) {
+      // 提取模型名稱 (移除 provider 前綴)
+      const parts = fullModel.split('/');
+      const modelName = parts.length > 1 ? parts[parts.length - 1] : fullModel;
+      
+      // 如果這個模型沒有 usage 數據，補上 -1
+      if (!models[modelName] && modelName.length > 3) {
+        console.log(`  → Adding missing model: ${modelName} = -1 (no usage data)`);
+        models[modelName] = -1;
+      }
+    }
+  }
+  
+  console.log('Parsed Models (with fallback):', models);
   return models;
 }
 
 const SESSIONS_PATH = '/home/openclaw/.openclaw/agents/main/sessions/sessions.json';
+
+/**
+ * V2.1: 檢查 tasks/inbox/ 目錄中的待派發任務
+ * @returns {Array} 待派發的任務列表 (供 Dashboard 顯示)
+ */
+function processInbox(agents) {
+  const tasks = [];
+  
+  try {
+    if (!fs.existsSync(INBOX_PATH)) return tasks;
+    
+    const files = fs.readdirSync(INBOX_PATH);
+    
+    for (const file of files) {
+      if (!file.endsWith('.md')) continue;
+      
+      const filePath = path.join(INBOX_PATH, file);
+      const stat = fs.statSync(filePath);
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      // 解析 Frontmatter
+      const statusMatch = content.match(/status:\s*["']?(\w+)["']?/);
+      const typeMatch = content.match(/type:\s*["']?(\w+)["']?/);
+      const status = statusMatch ? statusMatch[1] : 'unknown';
+      
+      // 讀取標題 (第一行)
+      let title = file.replace('.md', '');
+      const firstLine = content.split('\n')[0];
+      if (firstLine.startsWith('# ')) title = firstLine.slice(2).trim();
+      else if (firstLine.startsWith('## ')) title = firstLine.slice(3).trim();
+      else if (firstLine.trim()) title = firstLine.trim().substring(0, 50);
+
+      // 如果是 Pending，嘗試分派
+      if (status === 'pending') {
+          const type = typeMatch ? typeMatch[1] : 'general';
+          let targetLabel = 'handyman';
+          let targetModel = 'google-antigravity/gemini-3-pro-high';
+          
+          if (type === 'coding') {
+              targetLabel = 'tech_team';
+              targetModel = 'google-antigravity/claude-opus-4-5-thinking';
+          }
+          
+          // 檢查 Executor 是否 Idle (只要沒有 active session 就算 idle)
+          // 注意：agents 陣列包含了所有 active session
+          const isBusy = agents.some(a => a.label === targetLabel && a.status === 'active');
+          
+          if (!isBusy) {
+              console.log(`[Router] Dispatching ${file} to ${targetLabel}...`);
+              
+              // 1. 更新狀態為 dispatched (避免重複派送)
+              const newContent = content.replace(/status:\s*["']?pending["']?/, 'status: "dispatched"');
+              fs.writeFileSync(filePath, newContent);
+              
+              // 2. 執行 Spawn 指令
+              const taskInstruction = `你現在位於 ${WORKSPACE_PATH}。請務必使用 read 工具讀取 ${filePath}，然後執行其中的指示。成功或失敗請務必更新檔案狀態 (status: "completed" 或 "failed")，並簡短說明原因。`;
+              const command = `${OPENCLAW_BIN} sessions spawn --agent main --label ${targetLabel} --model ${targetModel} --task "${taskInstruction}"`;
+              
+              exec(command, (err, stdout, stderr) => {
+                  if (err) {
+                      console.error(`[Router] Dispatch failed: ${err.message}`);
+                      // 失敗回滾
+                      fs.writeFileSync(filePath, content);
+                  } else {
+                      console.log(`[Router] Dispatched: ${stdout.trim()}`);
+                  }
+              });
+              
+              // 更新本次顯示狀態
+              tasks.push({
+                id: `inbox-${file}`,
+                title: title,
+                status: 'dispatched',
+                updatedAt: Date.now()
+              });
+              continue; // 已處理，跳過加入 pending 列表
+          } else {
+              console.log(`[Router] ${targetLabel} is busy, ${file} queued.`);
+          }
+      }
+      
+      // 加入列表顯示
+      tasks.push({
+        id: `inbox-${file}`,
+        title: title,
+        status: status,
+        updatedAt: Math.floor(stat.mtimeMs)
+      });
+    }
+    
+    tasks.sort((a, b) => a.updatedAt - b.updatedAt); // 舊的在前 (FIFO)
+    
+  } catch (err) {
+    console.error('processInbox error:', err.message);
+  }
+  
+  return tasks;
+}
+
+/**
+ * V2.1: Health Check - 發送告警通知
+ */
+async function sendHealthAlert(message) {
+  try {
+    await sleep(1000);
+    await runCommand(`openclaw message send --target="telegram" --message="🚨 Monitor Alert: ${message}"`);
+    console.log('Health alert sent:', message);
+    await sleep(1000);
+  } catch (err) {
+    console.error('Failed to send health alert:', err.message);
+  }
+}
 
 /**
  * 從 .jsonl 檔案讀取第一行 task (或最後一行 user message)
@@ -224,6 +372,8 @@ async function getTasks() {
     const tasks = [];
     const now = Date.now();
     
+    // 1. 先檢查 Inbox 中待派發的任務 (移至 updateStatus 統一處理)
+    
     // 獲取所有 sessions 並排序
     const sessions = Object.values(data).sort((a, b) => b.updatedAt - a.updatedAt);
     
@@ -297,6 +447,8 @@ async function updateStatus() {
     console.error(`[${now.toISOString()}] 獲取模型狀態失敗:`, err.message);
   }
   
+  await sleep(1000);
+  
   // 獲取 sessions (改用文件讀取)
   let agents = [];
   try {
@@ -304,12 +456,17 @@ async function updateStatus() {
   } catch (err) {
     console.error(`[${now.toISOString()}] 獲取 sessions 失敗:`, err.message);
   }
+
+  await sleep(1000);
   
   // 獲取任務
   const tasks = await getTasks();
   
-  const docPath = `projects/${PROJECT_ID}/databases/(default)/documents/status/main`;
-  const url = `https://firestore.googleapis.com/v1/${docPath}?key=${API_KEY}`;
+  // 執行 Router 檢查並合併 Inbox 任務 (這裡做真正的 Dispatch)
+  const inboxTasks = processInbox(agents);
+  
+  // 合併任務列表 (Inbox 任務優先顯示)
+  const allTasks = [...inboxTasks, ...tasks];
 
   // 構建 Firestore 格式的 agents array
   const agentsArray = agents.map(a => ({
@@ -326,7 +483,7 @@ async function updateStatus() {
   }));
   
   // 構建 Firestore 格式的 tasks array
-  const tasksArray = tasks.map(t => ({
+  const tasksArray = allTasks.map(t => ({
     mapValue: {
       fields: {
         id: { stringValue: t.id },
@@ -348,14 +505,17 @@ async function updateStatus() {
       last_seen: { timestampValue: now.toISOString() },
       last_seen_local: { stringValue: now.toISOString() },
       status: { stringValue: 'online' },
-      message: { stringValue: 'Dashboard V3.8 Active' },
+      message: { stringValue: 'Dashboard V4.1.1 Active' },
       updated_at: { integerValue: Date.now().toString() },
       models: { mapValue: { fields: modelsFields } },
       agents: { arrayValue: { values: agentsArray } },
       tasks: { arrayValue: { values: tasksArray } },
-      version: { stringValue: '3.8' }
+      version: { stringValue: '4.1.1' }
     }
   });
+  
+  const docPath = `projects/${PROJECT_ID}/databases/(default)/documents/status/main`;
+  const url = `https://firestore.googleapis.com/v1/${docPath}?key=${API_KEY}`;
   
   const urlObj = new URL(url);
   const options = {
@@ -373,23 +533,32 @@ async function updateStatus() {
     res.on('data', chunk => body += chunk);
     res.on('end', () => {
       if (res.statusCode >= 200 && res.statusCode < 300) {
-        console.log(`[${now.toISOString()}] ✓ Heartbeat V3.8 sent`);
+        console.log(`[${now.toISOString()}] ✓ Heartbeat V4.1.1 sent`);
+        consecutiveFailures = 0;
       } else {
         console.error(`[${now.toISOString()}] ✗ Error ${res.statusCode}:`, body);
+        consecutiveFailures++;
       }
     });
   });
 
   req.on('error', (err) => {
     console.error(`[${now.toISOString()}] ✗ Request failed:`, err.message);
+    consecutiveFailures++;
   });
 
   req.write(data);
   req.end();
+  
+  // Health Check
+  if (consecutiveFailures >= MAX_FAILURES_BEFORE_ALERT) {
+      sendHealthAlert(`Monitor failed to update Firestore for ${consecutiveFailures} times.`);
+      consecutiveFailures = 0; // Reset to avoid spam
+  }
 }
 
 // 啟動
-console.log('=== OpenClaw Monitor V3.8 ===');
+console.log('=== OpenClaw Monitor V4.1.1 ===');
 console.log(`Project: ${PROJECT_ID}`);
 console.log(`Interval: ${INTERVAL_MS / 1000}s`);
 console.log('-----------------------------');
@@ -402,6 +571,6 @@ setInterval(updateStatus, INTERVAL_MS);
 
 // 優雅退出
 process.on('SIGINT', () => {
-  console.log('\n👋 Monitor V3.8 stopped');
+  console.log('\n👋 Monitor V4.1.1 stopped');
   process.exit(0);
 });
